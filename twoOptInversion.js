@@ -65,7 +65,7 @@ function slowedTOI(){
     delay = setInterval(singleTwoOptInversion, speedSlider.value());
     two_opt_inversion_button.mousePressed(CI);
     
-	stop_button.position(width/2 + 635, height/2 + 105);
+	stop_button.position(width/2 + 635, height/2 + 175);
     stop_button.mousePressed(CI);
 }
 
@@ -80,7 +80,7 @@ function shufflePoints(numberOfCities){
 	CI();
 	points = [];
 	for (var i = 0; i < numberOfCities; i++){
-		var v = createVector(random(width), random(height/2));
+		var v = createVector(random(10, width - 10), random(80, height/2 + 70));
 		points[i] = v;
 	}
 	globalRecordDistance = pathCost(points);
